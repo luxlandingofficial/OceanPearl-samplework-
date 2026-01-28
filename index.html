@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Pearl | Authentic Malvani Seafood</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0f2a44;
+      --accent:#f4b860;
+      --light:#f9f9f9;
+      --dark:#111;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Poppins',sans-serif;
+      color:var(--dark);
+      background:var(--light);
+      line-height:1.7;
+    }
+
+    h1,h2,h3{
+      font-family:'Playfair Display',serif;
+      color:var(--primary);
+    }
+
+    a{text-decoration:none;color:inherit;}
+
+    /* NAVBAR */
+    header{
+      position:fixed;
+      top:0;left:0;width:100%;
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(8px);
+      z-index:999;
+    }
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 20px;
+      color:#fff;
+    }
+    .nav ul{display:flex;gap:25px;list-style:none;}
+    .nav li{font-size:14px;cursor:pointer;}
+    .btn{
+      background:var(--accent);
+      color:#000;
+      padding:10px 20px;
+      border-radius:30px;
+      font-weight:600;
+      transition:.3s;
+    }
+    .btn:hover{transform:scale(1.05);}
+
+    /* HERO */
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1604908554027-4d8f1f5d3a4c') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#2f00ff;
+      position:relative;
+    }
+    .hero::after{
+      content:'';
+      position:absolute;inset:0;
+      background:rgba(0,0,0,0.55);
+    }
+    .hero-content{
+      position:relative;
+      max-width:800px;
+      padding:20px;
+    }
+    .hero h1{font-size:60px;color:#000000;}
+    .hero p{margin:20px 0;font-size:18px;}
+
+    /* SECTIONS */
+    section{padding:100px 20px;}
+    .container{max-width:1200px;margin:auto;}
+
+    /* STORY */
+    .story{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+    .story img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 30px 60px rgba(0,0,0,.25);
+    }
+
+    /* MENU */
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+    .card{
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,.12);
+      transition:.4s;
+    }
+    .card:hover{transform:translateY(-10px);}
+    .card img{width:100%;height:200px;object-fit:cover;}
+    .card-body{padding:20px;}
+
+    /* REVIEWS */
+    .reviews{
+      background:#f1f4f8;
+    }
+    .reviews-scroll{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:calc(33.333% - 20px);
+      gap:30px;
+      overflow-x:auto;
+      padding:40px 10px;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .reviews-scroll::-webkit-scrollbar{display:none;}
+    .review-box{
+      scroll-snap-align:start;
+      background:#fff;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.1);
+      min-height:220px;
+    }
+
+    @media(max-width:900px){
+      .reviews-scroll{grid-auto-columns:85%;}
+    }
+
+    /* VISIT */
+    .visit{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:flex-start;
+    }
+    iframe{width:100%;height:350px;border-radius:20px;border:0;}
+
+    /* FOOTER */
+    footer{
+      background:var(--primary);
+      color:#fff;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    @media(max-width:900px){
+      .story,.visit{grid-template-columns:1fr;}
+      .hero h1{font-size:42px;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <h3>Ocean Pearl</h3>
+    <ul>
+      <li>About</li>
+      <li>Specialities</li>
+      <li>Menu</li>
+      <li>Reviews</li>
+      <li>Visit Us</li>
+    </ul>
+    <a class="btn" href="https://wa.me/919999999999" target="_blank">Connect With Us</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Ocean Pearl</h1>
+    <p>Authentic Malvani Seafood · Fresh from the Coast</p>
+    <a class="btn" href="https://wa.me/918446941988" target="_blank">Connect With Us</a>
+  </div>
+</section>
+
+
+<section>
+  <div class="container story">
+    <img src="front end.jpg" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h2>Authentic Malvani Hospitality</h2>
+      <p>Ocean Pearl is more than a restaurant — it’s a coastal experience. Serving traditional gharghuti Malvani cuisine with fresh catch, secret family spices and soulful flavors.</p>
+      <p><strong>Catch to Cook · Home Style · Fresh Daily</strong></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h1 data-aos="fade-up">Our Menu</h1>
+
+    <h3 data-aos="fade-up" style="margin-top:40px;">Starters</h3>
+    <div class="menu-grid">
+      <div class="card" data-aos="zoom-in"><img src="prawns fry.jpg"><div class="card-body"><h3>Prawns Rava Fry</h3><p>Crispy semolina-coated prawns with coastal spices.</p></div></div>
+       <div class="card" data-aos="zoom-in"><img src="koliwada.jpg"><div class="card-body"><h3>Prawns Koliwada</h3><p>Prawns Koliwada.</p></div></div>
+      <div class="card" data-aos="zoom-in"><img src="chicken malvani.jpg"><div class="card-body"><h3>Bombil Fry</h3><p>Classic Malvan-style crispy bombil.</p></div></div>
+    </div>
+
+    <h3 data-aos="fade-up" style="margin-top:70px;">Main Course</h3>
+    <div class="menu-grid">
+      <div class="card" data-aos="zoom-in"><img src="Crab-thali.webp"><div class="card-body"><h3>Crab Curry Thali</h3><p>Fresh crab cooked in rich Malvani gravy.</p></div></div>
+      <div class="card" data-aos="zoom-in"><img src="surmai thali.jpg"><div class="card-body"><h3>Surmai Thali</h3><p>King fish curry served with rice & solkadhi.</p></div></div>
+      <div class="card" data-aos="zoom-in"><img src="chicken malvani.jpg"><div class="card-body"><h3>Chicken Malvani</h3><p>Slow-cooked chicken in coconut gravy.</p></div></div>
+    </div>
+
+    <h3 data-aos="fade-up" style="margin-top:70px;">Desserts & Drinks</h3>
+    <div class="menu-grid">
+      <div class="card" data-aos="zoom-in"><img src="solkadhi.jpg"><div class="card-body"><h3>Solkadhi</h3><p>Refreshing kokum & coconut milk drink.</p></div></div>
+      <div class="card" data-aos="zoom-in"><img src="Modak-Modakam-Recipe-scaled.jpg"><div class="card-body"><h3>Modak</h3><p>Traditional sweet dumplings.</p></div></div>
+      <div class="card" data-aos="zoom-in"><img src="milk paya sam.webp"><div class="card-body"><h3>Payasam</h3><p>South-style dessert with coconut milk.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 data-aos="fade-up">Signature Dishes</h2>
+    <div class="menu-grid">
+      <div class="card" data-aos="zoom-in">
+        <img src="crabs.jpg">
+        <div class="card-body">
+          <h3>Crab Thali</h3>
+          <p>Fresh caught crabs cooked in rich Malvani gravy.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="prawns fry.jpg">
+        <div class="card-body">
+          <h3>Prawns Rava Fry</h3>
+          <p>Golden fried prawns with coastal spices.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="solkadhi.jpg">
+        <div class="card-body">
+          <h3>Solkadhi</h3>
+          <p>Refreshing kokum & coconut digestive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <h2 data-aos="fade-up">Loved by Locals & Tourists</h2>
+    <div class="reviews-scroll" data-aos="fade-up">
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Authentic Malvani taste, super fresh seafood. A must visit!"</p><strong>- Rahul Deshpande</strong></div>
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Felt like eating at a local home by the sea."</p><strong>- Sneha Patil</strong></div>
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Best crab curry we had in Malvan so far."</p><strong>- Aman Joshi</strong></div>
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Owner suggested dishes based on fresh catch — amazing experience."</p><strong>- Travel Blogger</strong></div>
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Fresh fish, authentic masala, warm hospitality."</p><strong>- Local Guide</strong></div>
+      <div class="review-box">⭐⭐⭐⭐⭐<p>"Worth every visit when in Malvan."</p><strong>- Google Review</strong></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container visit">
+    <div data-aos="fade-right">
+      <h2>Visit Us</h2>
+      <p><strong>Address:</strong> Near Beach Road, Coastal Maharashtra</p>
+      <p><strong>Lunch:</strong> 11:30 AM – 3:30 PM</p>
+      <p><strong>Dinner:</strong> 7:30 PM – 10:30 PM</p>
+      <a class="btn" style="margin-top:25px;display:inline-block;">Get Directions</a>
+    </div>
+    <iframe data-aos="fade-left" src="https://maps.google.com/maps?q=malvan%20beach&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ocean Pearl · Made With Lux Landing</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1200,once:true});</script>
+</body>
+</html>
